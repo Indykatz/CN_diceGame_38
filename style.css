@@ -53,7 +53,7 @@ h1 {
 }
 
 h2 {
-  text-align: right;
+  text-align: left;
   color: #94a4b3;
   font-size: 1.9rem;
 }
@@ -168,7 +168,6 @@ h4 {
   border-radius: 10%;
   margin: 10px auto;
   display: flex;
-
 }
 
 .column {
