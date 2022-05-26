@@ -2,7 +2,6 @@
 
 const topTextArea = document.getElementById("textArea");
 const restart = document.getElementById("restart");
-const rolldice = document.getElementById("rolldice");
 const count = document.getElementById("count");
 const roll = document.getElementById("roll");
 const score = document.getElementById("score");
@@ -34,7 +33,6 @@ const newGameFunc = () => {
   gameScore = 0;
   diceRoll = 0;
   count.textContent = gameCount;
-  roll.textContent = gameScore;
   score.textContent = diceRoll;
   resetDice();
   d5.style.backgroundColor = "#fff";
@@ -72,7 +70,6 @@ const oneRolled = () => {
 const logScore = () => {
   gameCount += 1;
   count.textContent = gameCount;
-  roll.textContent = diceRoll;
   gameScore += diceRoll;
   score.textContent = gameScore;
   if (gameScore > 21) {
