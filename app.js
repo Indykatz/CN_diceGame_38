@@ -1,6 +1,5 @@
 // Dice game JS
-
-const topTextArea = document.getElementById("textArea");
+const textArea = document.getElementById("textArea");
 const restart = document.getElementById("restart");
 const count = document.getElementById("count");
 const roll = document.getElementById("roll");
@@ -28,7 +27,6 @@ restart.addEventListener("click", () => {
 
 // new game function
 const newGameFunc = () => {
-  topTextArea.textContent = "Score 21 to win! Game Over if roll a 1";
   gameCount = 0;
   gameScore = 0;
   diceRoll = 0;
@@ -36,6 +34,8 @@ const newGameFunc = () => {
   score.textContent = diceRoll;
   resetDice();
   d5.style.backgroundColor = "#fff";
+  textArea.textContent =
+    "Score 21 to win! Roll a 1 and game is over! Press New Game to start. Click center of dice to roll.";
 };
 
 d5.addEventListener("click", () => {
@@ -63,7 +63,8 @@ const rollDiceFunc = () => {
 
 // oneRolled  function
 const oneRolled = () => {
-  topTextArea.textContent = `ROLLED A ${diceRoll} GAME OVER`;
+  textArea.textContent = `ROLLED A ${diceRoll} GAME OVER! Press new Game to continue
+  `;
 };
 
 // next round function
@@ -73,10 +74,10 @@ const logScore = () => {
   gameScore += diceRoll;
   score.textContent = gameScore;
   if (gameScore > 21) {
-    topTextArea.textContent = `GAME LOST YOU SCORED ${gameScore}`;
+    textArea.textContent = `GAME LOST YOU SCORED ${gameScore}! Press new Game to continue`;
   } else {
     if (gameScore == 21) {
-      topTextArea.textContent = `GAME WON YOU SCORED ${gameScore}`;
+      textArea.textContent = `GAME WON YOU SCORED ${gameScore}! Press new Game to continue`;
     }
   }
 };
