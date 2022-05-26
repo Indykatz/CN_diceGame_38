@@ -7,6 +7,15 @@ const count = document.getElementById("count");
 const roll = document.getElementById("roll");
 const score = document.getElementById("score");
 
+// dice dot elements
+const d1 = document.getElementById("d1");
+const d2 = document.getElementById("d2");
+const d3 = document.getElementById("d3");
+const d5 = document.getElementById("d5");
+const d7 = document.getElementById("d7");
+const d8 = document.getElementById("d8");
+const d9 = document.getElementById("d9");
+
 // game var
 let gameCount = 0;
 let gameScore = 0;
@@ -28,10 +37,10 @@ const newGameFunc = () => {
   roll.textContent = gameScore;
   score.textContent = diceRoll;
   resetDice();
-  d1.style.backgroundColor = "#2a5a97";
+  d5.style.backgroundColor = "#fff";
 };
 
-rolldice.addEventListener("click", () => {
+d5.addEventListener("click", () => {
   resetDice();
   if (gameScore < 21 && diceRoll != 1 && count.textContent != `-`) {
     rollDiceFunc();
@@ -74,14 +83,6 @@ const logScore = () => {
     }
   }
 };
-// dice dot elements
-const d1 = document.getElementById("d1");
-const d2 = document.getElementById("d2");
-const d3 = document.getElementById("d3");
-const d5 = document.getElementById("d5");
-const d7 = document.getElementById("d7");
-const d8 = document.getElementById("d8");
-const d9 = document.getElementById("d9");
 
 // dice face pattern
 const df1 = [d5];
