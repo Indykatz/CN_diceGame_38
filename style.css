@@ -142,6 +142,7 @@ h4 {
   flex-direction: row;
   flex-wrap: wrap;
   color: #2a5a97;
+  justify-content: space-around;
 }
 
 .content li {
@@ -165,8 +166,9 @@ h4 {
   width: 104px;
   height: 104px;
   border-radius: 10%;
-  margin: auto;
+  margin: 10px auto;
   display: flex;
+
 }
 
 .column {
