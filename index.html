@@ -4,39 +4,71 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dice Game</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
+    />
+    <title>CN Template</title>
   </head>
   <body>
-    <header><h1>Dice Game 1 Player</h1></header>
-    <ul>
-      <li id="topTextArea">Press New Game To Start</li>
-    </ul>
-    <ul>
-      <li id="restart">New Game</li>
-      <li id="rolldice">Roll Dice</li>
-    </ul>
-    <!-- unordered list -->
-    <ul>
-      <li>
-        Roll Count
-        <p id="count">-</p>
-      </li>
-      <li>
-        Dice Roll
-        <p id="roll">-</p>
-      </li>
-      <li>
-        Score
-        <p id="score">-</p>
-      </li>
-    </ul>
-    <!-- <footer> -->
-    <footer>
-      Code Nation Masters 38 Dice Game | Katherine Ayers | Indykatz
+    <div class="container">
+      <!-- header banner -->
+      <div class="heading">
+        <div class="headingContent">
+          <h1>Dice 1 Player</h1>
+          <h2>Code Nation Masters 38</h2>
+        </div>
+      </div>
+      <!--  content -->
+      <div class="content" id="textArea">Dice Game - Score 21 to win</div>
+      <!-- white part -->
+      <div class="content">
+        <ul>
+          <li id="restart">New Game</li>
+          <li id="rolldice">Roll Dice</li>
+        </ul>
+        <!-- unordered list -->
+        <ul>
+          <li>
+            Roll Count
+            <p id="count">-</p>
+          </li>
+          <li>
+            Dice Roll
+            <p id="roll">-</p>
+          </li>
+          <li>
+            Score
+            <p id="score">-</p>
+          </li>
+        </ul>
+      </div>
+      <!-- <footer> -->
+      <div class="foot">
+        Katherine Ayers | Indykatz
+        <nav class="flex-nav">
+          <ul>
+            <li class="social">
+              <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
+            </li>
+            <li class="social">
+              <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
+            </li>
+            <li class="social">
+              <a href="http://github.com/Indykatz" target="_blank"
+                ><i class="fa fa-github"></i
+              ></a>
+            </li>
+            <li class="social">
+              <a href="#" target="_blank"><i class="fa fa-instagram"></i></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
       <!-- JS script -->
       <script src="app.js"></script>
       <!-- </footer> -->
-    </footer>
+    </div>
   </body>
 </html>

@@ -1,6 +1,6 @@
 // Dice game JS
 
-const topTextArea = document.getElementById("topTextArea");
+const topTextArea = document.getElementById("textArea");
 const restart = document.getElementById("restart");
 const rolldice = document.getElementById("rolldice");
 const count = document.getElementById("count");

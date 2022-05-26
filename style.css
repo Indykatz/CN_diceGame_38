@@ -1,0 +1,193 @@
+/* styling of html content */
+html {
+  font-family: Lato, sans-serif;
+  font-size: 62.5%;
+  word-spacing: 1px;
+  color: black;
+}
+
+/* found these when inspecting the code - resolved spacing issue
+    
+    * will apply to the whole page - Asked Gwyl */
+*,
+::after,
+::before,
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  margin: 0;
+}
+
+/* The body styling */
+body {
+  font-size: 1.8rem;
+}
+
+/* container is the whole webpage, header, footer, content are all contained in the conntainer  */
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* The header section */
+.heading {
+  background-color: #2a5a97;
+  color: #fff;
+  font-size: 18px;
+}
+
+/* The content within the header */
+.headingContent {
+  padding: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: left;
+}
+
+h2 {
+  text-align: right;
+  color: #94a4b3;
+  font-size: 1.9rem;
+}
+h3 {
+  color: white;
+  font-size: 2rem;
+}
+h4 {
+  color: #2a5a97;
+  font-size: 10rem;
+}
+
+#returnedText {
+  color: #2a5a97;
+  font-size: 3rem;
+}
+
+#returnStr {
+  color: #2a5a97;
+  font-size: 3rem;
+}
+
+/* navbar */
+.heading {
+  background-color: #2a5a97;
+  color: #fff;
+  font-size: 18px;
+}
+
+.navbar {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-bottom: 10px;
+}
+
+.flex-nav a {
+  color: white;
+  font-weight: 100;
+  letter-spacing: 2px;
+  text-decoration: none;
+  padding: 20px 5px;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  transition: all 0.5s;
+  color: #f49446;
+}
+
+.flex-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.flex-nav ul li {
+  flex-grow: 1;
+}
+
+.social {
+  display: flex;
+}
+
+#textArea {
+  background-color: #2a5a97;
+  color: #fff;
+  font-size: 18px;
+  margin: 0px;
+  padding: 0 20px 20px;
+}
+
+.content {
+  box-sizing: border-box;
+  padding: 10px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* #center {
+  margin-top: 50px;
+} */
+
+.numDiplay {
+  background-color: #2a5a97;
+  padding: 10px;
+  text-align: center;
+  margin-top: 10px;
+  color: #94a4b3;
+}
+
+.content ul {
+  padding: 10px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  color: #2a5a97;
+}
+
+.content li {
+  list-style: none;
+  flex-grow: 1;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+}
+
+/* footer */
+.foot {
+  position: fixed;
+  bottom: 0px;
+  background-color: #2a5a97;
+  padding: 10px;
+  text-align: center;
+  margin-top: 10px;
+  color: #94a4b3;
+  width: 100%;
+}
+
+/* mobile and view for screens less than 500px */
+@media only screen and (max-width: 500px) {
+  .headingContent {
+    font-size: 80%;
+  }
+
+  h2 {
+    font-size: 80%;
+  }
+
+  .foot {
+    position: relative;
+    bottom: 0px;
+  }
+}
