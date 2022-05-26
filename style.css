@@ -132,24 +132,12 @@ h4 {
   box-sizing: border-box;
   padding: 10px;
   text-align: center;
-  margin-top: 10px;
+  /* margin-top: 10px; */
 }
-
-/* #center {
-  margin-top: 50px;
-} */
-
-/* .numDiplay {
-  background-color: #2a5a97;
-  padding: 10px;
-  text-align: center;
-  margin-top: 10px;
-  color: #94a4b3;
-} */
 
 .content ul {
   padding: 10px;
-  margin-top: 10px;
+  /* margin-top: 10px; */
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -167,6 +155,37 @@ h4 {
   border-radius: 15px;
 }
 
+/* ------ */
+/* dice   */
+/* ----- */
+
+.dice {
+  padding: 4px;
+  background-color: #2a5a97;
+  width: 104px;
+  height: 104px;
+  border-radius: 10%;
+  margin: auto;
+  display: flex;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  flex-grow: 1;
+}
+
+.dot {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #2a5a97;
+  margin: auto;
+  margin-bottom: 5px;
+}
+
+/* ------ */
 /* footer */
 .foot {
   position: fixed;
@@ -194,3 +213,4 @@ h4 {
     bottom: 0px;
   }
 }
+
