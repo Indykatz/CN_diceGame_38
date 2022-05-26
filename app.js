@@ -1,46 +1,48 @@
 // Dice game JS
 const textArea = document.getElementById("textArea");
 const restart = document.getElementById("restart");
-const count = document.getElementById("count");
-const roll = document.getElementById("roll");
-const score = document.getElementById("score");
+
+// player 1 p1_
+const p1_count = document.getElementById("p1_count");
+const p1_roll = document.getElementById("p1_roll");
+const p1_score = document.getElementById("p1_score");
 
 // dice dot elements
-const d1 = document.getElementById("d1");
-const d2 = document.getElementById("d2");
-const d3 = document.getElementById("d3");
-const d5 = document.getElementById("d5");
-const d7 = document.getElementById("d7");
-const d8 = document.getElementById("d8");
-const d9 = document.getElementById("d9");
+const p1_d1 = document.getElementById("p1_d1");
+const p1_d2 = document.getElementById("p1_d2");
+const p1_d3 = document.getElementById("p1_d3");
+const p1_d5 = document.getElementById("p1_d5");
+const p1_d7 = document.getElementById("p1_d7");
+const p1_d8 = document.getElementById("p1_d8");
+const p1_d9 = document.getElementById("p1_d9");
 
 // game var
-let gameCount = 0;
-let gameScore = 0;
-let diceRoll = 0;
+let p1_gameCount = 0;
+let p1_gameScore = 0;
+let p1_diceRoll = 0;
 
 // event listener for new game
 restart.addEventListener("click", () => {
-  d1.style.backgroundColor = "#2a5a97";
+  p1_d1.style.backgroundColor = "#2a5a97";
   newGameFunc();
 });
 
 // new game function
 const newGameFunc = () => {
-  gameCount = 0;
-  gameScore = 0;
-  diceRoll = 0;
-  count.textContent = gameCount;
-  score.textContent = diceRoll;
+  p1_gameCount = 0;
+  p1_gameScore = 0;
+  p1_diceRoll = 0;
+  p1_count.textContent = p1_gameCount;
+  p1_score.textContent = p1_diceRoll;
   resetDice();
-  d5.style.backgroundColor = "#fff";
+  p1_d5.style.backgroundColor = "#fff";
   textArea.textContent =
     "Score 21 to win! Roll a 1 and game is over! Press New Game to start. Click center of dice to roll.";
 };
 
-d5.addEventListener("click", () => {
+p1_d5.addEventListener("click", () => {
   resetDice();
-  if (gameScore < 21 && diceRoll != 1 && count.textContent != `-`) {
+  if (p1_gameScore < 21 && p1_diceRoll != 1 && p1_count.textContent != `-`) {
     rollDiceFunc();
   }
 });
@@ -52,9 +54,9 @@ const diceNumber = (min, max) => {
 
 // roll dice function
 const rollDiceFunc = () => {
-  diceRoll = diceNumber(1, 6);
+  p1_diceRoll = diceNumber(1, 6);
   diceResult();
-  if (diceRoll == 1) {
+  if (p1_diceRoll == 1) {
     oneRolled();
   } else {
     logScore();
@@ -63,38 +65,38 @@ const rollDiceFunc = () => {
 
 // oneRolled  function
 const oneRolled = () => {
-  textArea.textContent = `ROLLED A ${diceRoll} GAME OVER! Press new Game to continue
+  textArea.textContent = `ROLLED A ${p1_diceRoll} GAME OVER! Press new Game to continue
   `;
 };
 
 // next round function
 const logScore = () => {
-  gameCount += 1;
-  count.textContent = gameCount;
-  gameScore += diceRoll;
-  score.textContent = gameScore;
-  if (gameScore > 21) {
-    textArea.textContent = `GAME LOST YOU SCORED ${gameScore}! Press new Game to continue`;
+  p1_gameCount += 1;
+  p1_count.textContent = p1_gameCount;
+  p1_gameScore += p1_diceRoll;
+  p1_score.textContent = p1_gameScore;
+  if (p1_gameScore > 21) {
+    textArea.textContent = `GAME LOST YOU SCORED ${p1_gameScore}! Press new Game to continue`;
   } else {
-    if (gameScore == 21) {
-      textArea.textContent = `GAME WON YOU SCORED ${gameScore}! Press new Game to continue`;
+    if (p1_gameScore == 21) {
+      textArea.textContent = `GAME WON YOU SCORED ${p1_gameScore}! Press new Game to continue`;
     }
   }
 };
 
 // dice face pattern
-const df1 = [d5];
-const df2 = [d1, d9];
-const df3 = [d3, d5, d7];
-const df4 = [d1, d3, d7, d9];
-const df5 = [d1, d3, d5, d7, d9];
-const df6 = [d1, d2, d3, d7, d8, d9];
+const p1_df1 = [p1_d5];
+const p1_df2 = [p1_d1, p1_d9];
+const p1_df3 = [p1_d3, p1_d5, p1_d7];
+const p1_df4 = [p1_d1, p1_d3, p1_d7, p1_d9];
+const p1_df5 = [p1_d1, p1_d3, p1_d5, p1_d7, p1_d9];
+const p1_df6 = [p1_d1, p1_d2, p1_d3, p1_d7, p1_d8, p1_d9];
 
-const diceFaceList = [df1, df2, df3, df4, df5, df6];
+const diceFaceList = [p1_df1, p1_df2, p1_df3, p1_df4, p1_df5, p1_df6];
 
 const diceResult = () => {
   resetDice();
-  let searchFor = diceFaceList[diceRoll - 1];
+  let searchFor = diceFaceList[p1_diceRoll - 1];
   let dItems = searchFor;
   for (let i = 0; i < dItems.length; i++) {
     console.log(dItems[i]);
@@ -103,11 +105,11 @@ const diceResult = () => {
 };
 
 const resetDice = () => {
-  d1.style.backgroundColor = "#2a5a97";
-  d2.style.backgroundColor = "#2a5a97";
-  d3.style.backgroundColor = "#2a5a97";
-  d5.style.backgroundColor = "#2a5a97";
-  d7.style.backgroundColor = "#2a5a97";
-  d8.style.backgroundColor = "#2a5a97";
-  d9.style.backgroundColor = "#2a5a97";
+  p1_d1.style.backgroundColor = "#2a5a97";
+  p1_d2.style.backgroundColor = "#2a5a97";
+  p1_d3.style.backgroundColor = "#2a5a97";
+  p1_d5.style.backgroundColor = "#2a5a97";
+  p1_d7.style.backgroundColor = "#2a5a97";
+  p1_d8.style.backgroundColor = "#2a5a97";
+  p1_d9.style.backgroundColor = "#2a5a97";
 };
