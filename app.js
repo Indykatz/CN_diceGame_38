@@ -3,6 +3,7 @@ const textArea = document.getElementById("textArea");
 const restart = document.getElementById("restart");
 
 // player 1 p1_
+const p1 = document.getElementById("p1");
 const p1_count = document.getElementById("p1_count");
 const p1_roll = document.getElementById("p1_roll");
 const p1_score = document.getElementById("p1_score");
@@ -15,6 +16,13 @@ const p1_d5 = document.getElementById("p1_d5");
 const p1_d7 = document.getElementById("p1_d7");
 const p1_d8 = document.getElementById("p1_d8");
 const p1_d9 = document.getElementById("p1_d9");
+console.log(p1_d1);
+
+// get ids
+const parent1 = document.querySelector("#p1");
+console.log(parent1);
+const kids = parent1.children;
+console.log(kids)
 
 // game var
 let p1_gameCount = 0;

@@ -154,6 +154,9 @@ h4 {
   box-sizing: border-box;
   border: 1px solid #2a5a97;
   border-radius: 15px;
+  background-color: #2a5a97;
+  box-shadow: 0 0 10px #2a5a97;
+  color: #f49446;
 }
 
 /* ------ */
@@ -188,6 +191,25 @@ h4 {
 
 #p1_d5 {
   background-color: #fff;
+}
+
+/* restart */
+#restart:hover {
+  color: #2a5a97;
+  background: #f49446;
+  box-shadow: 0 0 10px #f49446, 0 0 40px #f49446, 0 0 80px;
+}
+#restart:active {
+  box-shadow: 0 0 5px #2a5a97;
+  transform: translateY(4px);
+}
+/* dice */
+.dice:hover {
+  box-shadow: 0 0 10px #f49446, 0 0 40px #f49446, 0 0 80px;
+}
+.dice:active {
+  box-shadow: 0 0 5px #2a5a97;
+  transform: translateY(4px);
 }
 
 /* ------ */
